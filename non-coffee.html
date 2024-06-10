@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATfé Coffee</title>
+    <link rel="stylesheet" href="C:\BSIT 3D\lab7\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+        body.dark-mode {
+            background-color: #636262;
+        }
+        body.dark-mode .bg-light {
+            background-color: #4e4d4d !important;
+        }
+        body.dark-mode a {
+            color: #636262;
+        }
+        body.dark-mode .card-body {
+            background-color: #636262;
+        }
+        body.dark-mode .card-title, body.dark-mode .card-text {
+            color: #636262;
+        }
+        body.dark-mode .button {
+            color: #636262;
+            background-color: #636262;
+            box-shadow: 0 0 0 4px #636262, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+        }
+
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+  ;
+ transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+
+        *, *::after, *::before {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        body {
+            background-color: #ffd5a7;
+        }
+        p, h1, h2, h3, h4, h5, h6 {
+            line-height: normal;
+        }
+        nav {
+            
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .cat-title {
+            font-size: 35px;
+        }
+        .bg-light {
+ 
+    background-color: #cc9966 !important;
+
+        }
+        .catlogo{
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+
+        .namelogo{
+            margin-top: 10px;
+        }
+
+        button {
+  outline: none;
+  color: #DAA06D;
+  padding: 1px;
+  padding-left: 1em;
+  padding-right: 1em;
+  border: 2px dashed #DAA06D;
+  border-radius: 000px;
+  background-color: #EADDCA;
+  box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: .1s ease-in-out, .4s color;
+}
+
+button:active {
+  transform: translateX(0.3px) translateY(0.3px);
+  box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+    </style>
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="container mt-5">
+        <header>
+
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img class="catlogo img-fluid" src="C:\BSIT 3D\lab7\logo.png" alt="home-logo" width="50" height="100"><img class="namelogo img-fluid" src="C:\BSIT 3D\lab7\name.png" alt="home-logo" width="120" height="110">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <div class="switch-container">
+                        <label class="switch">
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <span class="slider"></span>
+                        </label>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        </header>
+
+        <p></p>
+        <p></p>
+        <p></p>
+        
+        <div class="head-title mt-5" style="text-align:center;"><H1> Non-Coffee</H1></div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+ 
+
+    
+
+            <div class="col">
+                <div class="card">
+                    <img src="C:\BSIT 3D\lab7\non-coffee\mou.png" class="card-img-top img-fluid" alt="normal-coffee">
+                    <div class="card-body"style="background-color:#cc9966;">
+                        <h5 class="card-title">Meowtain Dew Delight</h5>
+                        <p class="card-text">Price: ₱69.00</p>
+                       
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <img src="C:\BSIT 3D\lab7\non-coffee\mil.png" class="card-img-top img-fluid" alt="iced-coffee">
+                    <div class="card-body"style="background-color:#cc9966;">
+                        <h5 class="card-title">Milky Macha</h5>
+                        <p class="card-text">Price: ₱89.00</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <img src="C:\BSIT 3D\lab7\non-coffee\straw.png" class="card-img-top img-fluid" alt="croffle-product">
+                    <div class="card-body"style="background-color:#cc9966;">
+                        <h5 class="card-title">Milky Strawberry
+                        </h5>
+                        <p class="card-text">₱99.00</p>
+                     
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <img src="C:\BSIT 3D\lab7\non-coffee\mats.png" class="card-img-top img-fluid" alt="non-coffee-product">
+                    <div class="card-body"style="background-color:#cc9966;">
+                        <h5 class="card-title">Strawberry Matcha</h5>
+                        <p class="card-text">Price: ₱99.00 </p>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <img src="C:\BSIT 3D\lab7\non-coffee\float.png" class="card-img-top img-fluid" alt="frappe-product">
+                    <div class="card-body"style="background-color:#cc9966;">
+                        <h5 class="card-title">Chocolate Float</h5>
+                        <p class="card-text">Price: ₱109.00</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <img src="C:\BSIT 3D\lab7\non-coffee\cho.png" class="card-img-top img-fluid" alt="croffle-product">
+                    <div class="card-body"style="background-color:#cc9966;">
+                        <h5 class="card-title">Choco Macha</h5>
+                        <p class="card-text">Price: ₱109.00.</p>
+                     
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col">
+                <div class="card">
+                    <img src="C:\BSIT 3D\lab7\non-coffee\cat.png" class="card-img-top img-fluid" alt="croffle-product">
+                    <div class="card-body"style="background-color:#cc9966;">
+                        <h5 class="card-title">Catnip Cooler</h5>
+                        <p class="card-text">Price: ₱129.00</p>
+                     
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+        
+        
+        <hr>
+        <div class="text-center mb-4"><b>Copyright © 2024 Catfé Company. All rights reserved</b></div>
+            
+            </div>
+    </div>
+    
+    <script src="C:\BSIT 3D\lab7\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.bundle.min.js"></script>
+    <script src="js.js"></script> 
+</body>
+</html>
